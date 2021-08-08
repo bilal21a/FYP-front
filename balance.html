@@ -37,6 +37,8 @@
 
     <!-- Comments links -->
     <link rel="stylesheet" id="css-main" href="assets/css/settings.css">
+    <link rel="stylesheet" id="css-main" href="assets/css/billing.css">
+
 
 
     <!-- You can include a specific file from css/themes/ folder to alter the default color theme of the template. eg: -->
@@ -54,21 +56,6 @@
 
             <div class="row">
 
-                <div class="col-sm-3">
-                    <aside class="db-sidebar">
-                        <nav class="db-nav nav-grey">
-
-                            <ul>
-                                <li class="sel simple-navigation-active-leaf"><a class="sel" href="/setting.html">Account</a></li>
-                                <li><a href="/security.html">Security</a></li>
-                                <li><a href="">Notifications</a></li>
-                                <li><a href="/billing.html">Billing Information</a></li>
-                                <li><a href="">Balance</a></li>
-                                <li><a href="">Form W-9</a></li>
-                            </ul>
-                        </nav>
-                    </aside>
-                </div>
 
 
                 <div class="col-sm-9 form_container">
@@ -97,20 +84,10 @@
                                         <span class="ml-4">$0.00</span>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td class="font-w600 font-size-sm">
-                                        Your Total connects
-                                    </td>
-
-                                    <td class="d-sm-table-cell">
-                                        <span class="ml-4">80</span>
-                                    </td>
-                                </tr>
+                               
                             </tbody>
                         </table>
-                        <button type="button" class="btn  btn-rounded btn-success mr-1 mb-3 buy_connects">
-                            Buy Connects
-                        </button>
+                       
                     </div>
 
                     <div class="balance_header">
@@ -140,7 +117,17 @@
                         </table>
 
                     </div>
+                        <div class="billing_form">
+                                <label for="">Invoices</label> <i class="fa fa-question-circle " data-toggle="tooltip" data-placement="right" title="Go to the Detalls section of an order to save a PDF of your invoice. "></i>
+                                <div>
+                                    <span>  <input type="checkbox" id="invoice_check"> &nbsp; Yes, email my billing info and original invoices.</span>
 
+                                </div>
+                            </div>
+                            <div class="form-group billing_form" id="invoice_email">
+                                <label for="example-email-input ">Email</label>
+                                <input type="email" class="form-control" id="example-email-input" name="example-email-input" placeholder="abc****@example.com">
+                            </div>
 
                 </div>
 
@@ -208,6 +195,15 @@
                 $(this).next('ul').toggle();
                 e.stopPropagation();
                 e.preventDefault();
+            });
+        });
+        $(document).ready(function() {
+            $('#invoice_check').click(function() {
+                if ($(this).prop("checked") == true) {
+                    $("#invoice_email").css("display", "block");
+                } else if ($(this).prop("checked") == false) {
+                    $("#invoice_email").css("display", "none");
+                }
             });
         });
     </script>

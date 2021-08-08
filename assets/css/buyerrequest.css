@@ -15,11 +15,11 @@
 }
 
 .select2-container--default .select2-selection--multiple .select2-selection__choice {
-    background-color: #14A800 !important;
+    background-color: #CA4F3E!important;
 }
 
 .select2-container--default .select2-results__option--highlighted[aria-selected] {
-    background-color: #14A800 !important;
+    background-color: #CA4F3E !important;
 }
 
 .main_col {

@@ -113,3 +113,7 @@ ul li {
 .side_links :hover{
     border-left:4px solid #14a800;
 }
+a{
+    text-decoration: none !important;
+    color: #575757;
+}
